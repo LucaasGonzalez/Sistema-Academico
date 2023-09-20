@@ -104,10 +104,10 @@ h4, h6 {
 	<form action="ServletAluno?cmd=atualizar" method="post" class="form">
 
 	<div id="topo" class="container-xxl p-5 my-5 bg-black text-white">
-		<img src="images/Logo.png" alt="Logo site"> <br> <br>
+		<img src="Logo.png" alt="Logo site"> <br> <br>
 
 		<a href="index.html" id="links">Página Principal</a> <a
-			href="html\incluir.html" id="links">Incluir</a> <a
+			href="incluir.html" id="links">Incluir</a> <a
 			href="ServletAluno?cmd=listar" id="links">Lista de Alunos</a>
 
 	</div>
