@@ -60,12 +60,12 @@ public class ServletAluno extends HttpServlet {
 			} else if (cmd.equalsIgnoreCase("listar")) {
 				List<Aluno> alunosList = dao.todosAlunos();
 				request.setAttribute("alunosList", alunosList);
-				rd = request.getRequestDispatcher("jsp/mostrarAlunos.jsp");
+				rd = request.getRequestDispatcher("mostrarAlunos.jsp");
 			} else if (cmd.equalsIgnoreCase("atu")) {
 				aluno = dao.procurarAluno(aluno.getRa());
 				HttpSession session = request.getSession(true);
 				session.setAttribute("aluno", aluno);
-				rd = request.getRequestDispatcher("jsp/atualizarAluno.jsp");
+				rd = request.getRequestDispatcher("atualizarAluno.jsp");
 			} else if (cmd.equalsIgnoreCase("atualizar")) {
 				dao.atualizar(aluno);
 				rd = request.getRequestDispatcher("ServletAluno?cmd=listar");
@@ -73,12 +73,12 @@ public class ServletAluno extends HttpServlet {
                 aluno = dao.procurarAluno(aluno.getRa());
                 HttpSession session = request.getSession(true);
                 session.setAttribute("aluno", aluno);
-                rd = request.getRequestDispatcher("jsp/consultarAluno.jsp");
+                rd = request.getRequestDispatcher("consultarAluno.jsp");
             } else if (cmd.equalsIgnoreCase("exc")) {
 				aluno = dao.procurarAluno(aluno.getRa());
 				HttpSession session = request.getSession(true);
 				session.setAttribute("aluno", aluno);
-				rd = request.getRequestDispatcher("jsp/excluirAluno.jsp");
+				rd = request.getRequestDispatcher("excluirAluno.jsp");
 			} else if (cmd.equalsIgnoreCase("excluir")) {
 				dao.excluir(aluno);
 				rd = request.getRequestDispatcher("ServletAluno?cmd=listar");
